@@ -1,0 +1,1 @@
+Simple template for websites for beachbars, pub's and more

@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import 'map.scss';
+@import 'footer.scss';
+@import 'wrapper.scss';
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    //margin: 2rem 5rem;
+    padding: 1rem 3rem;
+
+    
+    @media (max-width: 800px) {
+        justify-content: center;
+    }
+
+    &__logo {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        h2 {
+            font-weight: 100;
+            font-family: 'Poppins', sans-serif;
+        }
+        p {
+            font-family: 'Dancing Script', sans-serif;
+            font-weight: bold;
+            font-size: 30px;
+        }
+    }
+
+    &__menu li {
+        display: inline-block;
+        text-decoration: none;
+        padding: 1rem 2rem;
+        background: transparent;
+
+        @media (max-width: 800px) {
+            display: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #222;
+            font-weight: 100;
+        }
+
+    }
+
+    &__menu li:hover {
+        background: rgb(0, 0, 0);
+        transition: all .8s ease;
+        cursor: pointer;
+        
+        a {
+            color: #fff;
+        }
+    }
+}
+
+#primary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .hero {
+        background: url("billboard_template.jpg");
+        background-repeat: no-repeat;
+        background-position: 70% 70%;
+        background-size: cover;
+        width: 100%;
+        min-height: 60vh;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+        #button {
+            color: #fff;
+            border: none;
+            outline: none;
+            border: 1px solid #fff;
+            text-decoration: none;
+            margin-top: 1.5rem;
+            padding: .6rem 1.5rem;
+            font-weight: bold;
+        }
+        h1, h3 {
+            color: #fff;
+            text-shadow: 1px 1px 14px #222;
+        }
+
+        h1 {
+            font-size: 3vw;
+        }
+
+        h3 {
+            font-size: 2.5vw;
+        }
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 5rem 10rem;
+        width: 100%;
+        background: rgb(41, 41, 41);
+
+        @media (max-width: 800px) {
+            flex-direction: column;
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 64px;
+            margin-right: 40%;
+            text-align: left;
+        }
+    }
+
+    .grid {
+        align-content: center;
+        padding: 10rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 5rem;
+
+        @media (max-width: 800px) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-item {
+            text-align: center;
+
+            p:first-child {
+                font-weight: bold;
+                font-size: 30px;
+                margin-bottom: 1rem;
+            }
+        }
+
+    }
+
+    .menu-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+
+        &__header {
+            margin-top: 3rem;
+            padding: 0;
+
+            h2 {
+                font-size: 50px;
+                font-weight: 100;
+                font-family: 'Dancing Script', sans-serif;
+            }
+        }
+    }
+    .menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 5rem;
+        grid-template-rows: auto;
+        padding: 10rem;
+
+        @media (max-width: 800px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (max-width: 500px) {
+            grid-template-columns: 1fr;
+        }
+
+        &-item {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            padding: 6rem;
+            text-align: center;
+            align-items: center;
+            color: #fff;
+            font-size: 24px;
+            box-shadow: 1px 1px 2px #222;
+
+            h2 {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background: rgb(0, 0, 0);
+                padding: .4rem .5rem;
+                color: #fff;
+                font-size: 1.2rem;
+                text-shadow: 1px 1px 4px #222;
+            }
+        }
+
+        &-item:hover {
+            transform: scale(1.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .it1 {
+            background: url("icecream.jpg");
+            background-size: cover;
+            background-position: 70%;
+        }
+
+        .it2 {
+            background: url("dinner.jpg");
+            background-size: cover;
+        }
+
+        .it3 {
+            background: url("coffee.jpg");
+            background-size: cover;
+        }
+    }
+
+    #career {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 2rem 10rem;
+        background: rgb(228, 228, 228);
+        width: 100%;
+
+        .blank {
+            background: #222;
+        }
+
+        form {
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            
+            h1 {
+                padding: 2rem 0;
+            }
+
+            input {
+                border: none;
+                outline: none;
+                padding: .5rem 1rem;
+                border: 1px solid #ccc;
+                margin: .5rem 0;
+                width: 30vw;
+            }
+
+            button {
+                border: none;
+                background: #222;
+                color: #fff;
+                cursor: pointer;
+                padding: .5rem 1rem;
+            }
+        }
+    }
+    
+}
+
